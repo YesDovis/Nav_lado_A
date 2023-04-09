@@ -1,0 +1,94 @@
+/*Conf global*/
+/*PALETA DE COLORES #F6F1F1 (GRISALTO) #000000 (NEGRO)#146C94 (CELESTE LOGO) #19A7CE (SIMILTURQUEZA)*/
+*{
+    margin: 0;    /*establece el margen (espacio fuera del borde) de todos los elementos en 0.*/
+    padding: 0;   /*establece el relleno (espacio dentro del borde) de todos los elementos en 0.*/
+    box-sizing: border-box; /*especifica que el ancho y el alto de un elemento deben incluir el relleno y el borde, pero no el margen.*/
+    text-decoration: none; /*elimina cualquier subrayado u otras decoraciones de texto en los elementos.*/
+    font-family: Arial, sans-serif;  /*CHEQUIAR TIPOGRAFIA CON EL EQUIPO*/
+}
+
+body{
+    background: #ffffff; /*establece el color de fondo del elemento del cuerpo //CHEQUIAR FONDO CON EL EQUIPO*/
+}
+
+header{
+    width: 100%;
+    height: 90px;
+    background-color:#146C94;
+}
+
+.cabecera{
+    max-width: 100%;
+    padding: 0 10px;
+    margin: auto;
+}
+
+/*CABECERA---establece el ancho máximo al 100 %, agrega un relleno de 10 píxeles a los lados izquierdo y derecho y centra el elemento horizontalmente configurando los márgenes izquierdo y derecho en automático.*/
+
+.logo{
+    float: left; /*se utiliza para colocar una imagen de logotipo a la izquierda*/
+    padding: 5px 10px 0; /*paddingde 5px en la parte superior, 10pxa la derecha y 0en la parte inferior.*/
+}
+.logo img{
+    height: 130px; /*tamañologo*/
+}
+
+
+.logo img:hover{
+	transform: scale(1.1);
+}
+
+.navegacion{
+    float: right; /* (hace que el elemento flote a la derecha del contenedor)*/
+    display: flex; /*(habilita un contenedor flexible para el elemento)*/
+    align-items: center; /* (alinea los artículos flexibles verticalmente en el centro del contenedor)*/
+    min-height: 90px; /* (establece la altura mínima del elemento en 90 píxeles)*/
+   
+}
+
+.navegacion ul{
+    list-style: none; /* eliminar las viñetas o la numeración*/
+    padding: 0  10px;
+}
+
+.navegacion ul li{
+    display: inline-block; /*Esto hace que los lielementos sean elementos a nivel de bloque que fluyen horizontalmente UNO ALADITO DEL OTRO*/
+    position: relative;
+    transition: .3s linear; /* Efecto q al PASAR EL CURSOR SOBRE ELelemento transiciona 0.3s de manera lineal*/
+
+    
+}
+
+.navegacion ul li a{
+    color: rgb(255, 255, 255); /*COLOR MENU*/
+    text-align: center; /*texto centrado*/
+    text-transform: uppercase; /*texto en mayuscula*/
+    font-size: 15px; 
+    font-weight: bold;
+    padding:  12px 20px; /*arriba 12px y a sus lados 20px*/
+    transition: .3s linear; /*agregará un efecto de transición lineal con una duración de 0.3 segundos*/
+}
+
+.navegacion ul li a:hover{
+	color: #000000; /*COLOR CAMBIO DEL MENU*/
+	transform: scale(1.1);
+}
+.navegacion ul li:hover .hijos{
+	display: block;
+}
+
+.navegacion .submenu .hijos{
+	display: none;
+	background: #006594; /*FONDO MENUDESPLEGABLE*/
+	position: absolute;
+	width: 140%;
+}
+.navegacion .submenu .hijos li{
+	display: block;
+	overflow: hidden;
+	border-bottom: none;
+}
+.navegacion .submenu .hijos li a{
+	display: block;
+}
